@@ -1,26 +1,198 @@
 html,body{
-    margin: 0;
+ margin: 0;
+ width: 100%;
+ height: 100%;
 }
 
 body{
-    background-color: black;
+  background-color: darkslateblue;
 }
 
 .formBox{
+    width: 50%;
     display: grid;
-    width: 80%;
-    border: 2px solid black;
-    background-color: white; 
+    position: absolute;
+    top: 25%;
+    left: 25%;
+   
 }
 
 .formboxSection{
-    padding: 30px;
-    border: 1px solid rgb(0, 255, 157);
-}
-#box-section1{
-    grid-column-start: 1;  
-    grid-column-end: 3;
+    padding: 20px;
 }
 
-#box-section2,#box-section3{
+/*BOX-SECTION 1*/
+#box-section1{
+    grid-column-start: 1;  
+    grid-column-end: 4;
+    background-color: rgb(255, 255, 255);
+}
+.boxsection1-h2,.boxsection1-p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+.boxsection1-h2{
+   
+    color:  #2980b9;
+    letter-spacing: -2px;
+}
+.boxsection1-p{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.719);
+}
+
+/*BOX-SECTION 2*/
+#box-section2{
+    background-color:  #2980b9;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.boxsection2-h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    color: white;
+    letter-spacing: -1px;
+}
+.span-p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.boxsection2-p{
+    width: 150px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.746);
+    background-color:#5dade2;
+}
+.boxsection2-p2{
+    font-size: 20px;
+    color:  #26ff92;
+}
+.divBtn{
+    display: flex;
+    justify-content: left;
+}
+.btnBuy{
+    background-color:#1bda7a;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 5em 12px 5em;
+    color: white;   
+    text-decoration: none;
+}
+.btnBuy:hover{
+    transition: .3s;
+    background-color: #2bf690;
+    color: white;
+    text-decoration: none;
+}
+
+
+/*BOX-SECTION 3*/
+#box-section3{
+    background: rgb(77,161,218);
+    background: linear-gradient(114deg, rgba(77,161,218,1) 0%, rgba(39,129,189,1) 100%); 
+    grid-row: 2/3;
+    grid-column: 2/4;
+    
+}
+.boxsection3-h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    color:  #2bf690;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.boxsection3-ul li{
+    list-style-type: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1130px){
+    .formBox{
+        display: flex;
+        flex-direction: column;
+        top: 5%;
+    }
+    .divBtn{
+        display: flex;
+        justify-content: center;
+    }
+    .btnBuy{
+        padding: 12px 10em 12px 10em;
+    }
+
+    .boxsection3-h2{
+        font-size: 24px;
+    }
+    .boxsection3-ul{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 890px){
+    .btnBuy{
+        padding: 10px 9em 10px 9em;
+    }
+}
+@media only screen and (max-width: 826px){
+    .boxsection1-h2{
+        font-size: 25px;
+    }
+    .boxsection1-p{
+        font-size: 16px;
+    }
+    
+    .boxsection2-h2{
+        font-size: 25px;
+    }
+    .boxsection2-p{
+        font-size: 18px;
+    }
+    .btnBuy{
+        padding: 10px 8em 10px 8em;
+    }
+
+    .boxsection3-h2{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 762px){
+    .btnBuy{
+        padding: 10px 7em 10px 7em;
+    }
+}
+
+@media only screen and (max-width: 698px){
+    .btnBuy{
+        padding: 10px 6em 10px 6em;
+    }
+}
+
+@media only screen and (max-width: 634px){
+    .btnBuy{
+        padding: 10px 5em 10px 5em;
+    }
+}
+
+@media only screen and (max-width: 570px){
+    .formBox{
+        width: 80%;
+        left: 10%;
+    }
+    .btnBuy{
+        padding: 10px 3em 10px 3em;
+    }
+}
+@media only screen and (max-width:  490px){
+    .formBox{
+        width: 80%;
+        left: 10%;
+    }
 }
